@@ -1,0 +1,4 @@
+1. string 对象时恒定不变的，stringBuider对象表示的字符串是可变的。stringBuilder是.net提供的动态创建string的高效方式，以克服string对象恒定性带来的性能影响。
+2. 对于简单的字符串连接操作，在性能上stringBuilder并不一定总是优于string。因为stringBuider对象创建代价较大，在字符串目标连接较少的情况下，过度滥用stringBuilder会导致性能的浪费，只有大量的或者无法预知次数的字符串操作，才考虑stringBuilder来实现。事实上，一般连接次数设置100次以内，根本看不出两者的性能差别。
+3. 当修改字符串信息时，此时不许创建对象，可以使用stringBuilder对象。
+String 对象是不可改变的。每次使用 System.String 类中的方法之一时，都要在内存中创建一个新的字符串对象，这就需要为该新对象分配新的空间
